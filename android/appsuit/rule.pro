@@ -11,10 +11,6 @@
 -keep class org.apache.** { *; }
 -keepstrings class org.apache.** { *; }
 
-# kotlin library
--keep class kotlin.** { *; }
--keep class kotlinx.** { *; }
-
 # firebase rule 
 -keep class com.google.** { *; }
 -keepreflect class com.google.** { *; }
@@ -88,11 +84,16 @@ public void *(android.view.View);
 
 -dumpprofile proguard
 
--keep class io.flutter.** { *; }
--keepbare class io.flutter.** { *; }
--keepstrings class io.flutter.** { *; }
--keepreflect class io.flutter.** { *; }
--keepflow class io.flutter.** { *; }
+# Keep all classes in the package 'your_package'
+-keep class io.ionic.starter.** { *; }
+
+# Keep Web and JavaScript Classes
+-keep class io.ionic.** { *; }  # Ganti dengan namespace aplikasi Anda
+-keep class org.apache.** { *; }
+-keep class javax.** { *; }
+-keep class com.google.** { *; }
+-keep class com.squareup.** { *; }
+-keep class io.reactivex.** { *; }
 
 -secure_handler_timeout 5000
 #-secure_handler com.example.flutter_3_22.MainActivity.showAppSuitDialog
