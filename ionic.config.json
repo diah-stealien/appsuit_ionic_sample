@@ -1,0 +1,7 @@
+{
+  "name": "sample-appsuit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
